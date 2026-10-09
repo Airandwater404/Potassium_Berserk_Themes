@@ -39,8 +39,8 @@ Each theme below also has its own text; open **What the Japanese means** under i
 ## Guts · Berserker Armor
 
 <picture>
-  <source srcset="guts-armor/screens.avif" type="image/avif">
-  <img src="guts-armor/screens.jpg" alt="Guts · Berserker Armor theme">
+  <source srcset="guts-armor/ui.avif" type="image/avif">
+  <img src="guts-armor/ui.jpg" alt="Guts · Berserker Armor theme">
 </picture>
 
 <picture>
@@ -66,8 +66,8 @@ Each theme below also has its own text; open **What the Japanese means** under i
 ## Guts · Abstract Purple
 
 <picture>
-  <source srcset="guts-purple/screens.avif" type="image/avif">
-  <img src="guts-purple/screens.jpg" alt="Guts · Abstract Purple theme">
+  <source srcset="guts-purple/ui.avif" type="image/avif">
+  <img src="guts-purple/ui.jpg" alt="Guts · Abstract Purple theme">
 </picture>
 
 <picture>
@@ -93,8 +93,8 @@ Each theme below also has its own text; open **What the Japanese means** under i
 ## Guts · Chilling in the Rain
 
 <picture>
-  <source srcset="guts-rain/screens.avif" type="image/avif">
-  <img src="guts-rain/screens.jpg" alt="Guts · Chilling in the Rain theme">
+  <source srcset="guts-rain/ui.avif" type="image/avif">
+  <img src="guts-rain/ui.jpg" alt="Guts · Chilling in the Rain theme">
 </picture>
 
 <picture>
