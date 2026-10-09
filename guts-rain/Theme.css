@@ -1,0 +1,177 @@
+/* Guts · Chilling in the Rain theme for Potassium. Base theme: Dark. */
+:root[data-theme] {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  --bg-app: rgba(10, 10, 10, 0.15);
+  --bg-chrome: rgba(10, 10, 10, 0.62);
+  --bg-sidebar: rgba(10, 10, 10, 0.64);
+  --bg-editor: rgba(10, 10, 10, 0.5);
+  --bg-panel: rgba(10, 10, 10, 0.66);
+  --bg-status: rgba(10, 10, 10, 0.78);
+  --bg-elevated: rgba(10, 10, 10, 0.96);
+  --bg-input: rgba(10, 10, 10, 0.6);
+  --bg-hover: rgba(235, 235, 235, 0.12);
+  --bg-active: rgba(235, 235, 235, 0.22);
+  --border: rgba(235, 235, 235, 0.16);
+  --border-strong: rgba(235, 235, 235, 0.34);
+
+  --text: #f2f2f2;
+  --text-muted: #bdbdbd;
+  --text-faint: #7a7a7a;
+  --row-icon: #ffffff;
+
+  --accent: rgb(235, 235, 235);
+  --accent-hover: #ffffff;
+  --accent-soft: rgba(235, 235, 235, 0.2);
+  --on-accent: #0a0a0a;
+  --tab-accent: rgb(235, 235, 235);
+  --tab-rule: transparent;
+  --tab-glyph: #ffffff;
+  --tab-divider-width: 0px;
+  --tab-active-bg: rgba(235, 235, 235, 0.16);
+
+  --ok: #8be9a8;
+  --warn: #ffd76e;
+  --danger: #ff6b7a;
+  --titlebar-fg: #f2f2f2;
+  --titlebar-close-hover: #444444;
+  --scrollbar-thumb: rgba(235, 235, 235, 0.3);
+}
+
+/* Settings opens over everything; keep it readable over the moving wallpaper. */
+:root[data-theme] .settings-dialog {
+  background-color: rgba(10, 10, 10, 0.9) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+  backdrop-filter: blur(24px) saturate(1.2);
+}
+
+:root[data-theme] .settings-dialog .settings {
+  background-color: transparent !important;
+}
+
+/* Monaco paints its own solid background; let the wallpaper through. */
+.monaco-editor,
+.monaco-editor .overflow-guard,
+.monaco-editor-background,
+.monaco-editor .margin,
+.monaco-editor .inputarea.ime-input {
+  background-color: transparent !important;
+}
+
+.monaco-editor .view-overlays .current-line,
+.monaco-editor .margin-view-overlays .current-line-margin {
+  background: rgba(235, 235, 235, 0.07) !important;
+  border: none !important;
+}
+
+.monaco-editor .line-numbers { color: #7a7a7a !important; }
+.monaco-editor .line-numbers.active-line-number { color: #ffffff !important; }
+.monaco-editor .view-lines { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85); }
+.monaco-editor .scroll-decoration { box-shadow: none !important; }
+
+/* The minimap is a canvas with a solid fill; blending drops it into the wallpaper. */
+.monaco-editor .minimap,
+.monaco-editor .minimap canvas {
+  mix-blend-mode: screen !important;
+}
+
+.monaco-editor .minimap { opacity: 0.55 !important; }
+.monaco-editor .minimap-shadow-visible { box-shadow: none !important; }
+
+/* Show the wallpaper on the loading and login screens instead of Potassium's own picture. */
+:root[data-theme] .backdrop {
+  background: color-mix(in srgb, #0a0a0a 30%, transparent) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Japanese labels next to the English ones. */
+:root[data-theme] .titlebar-title { font-size: 0 !important; }
+:root[data-theme] .titlebar-title::after {
+  content: "ベルセルク · カリウム";
+  font-size: 13px;
+  font-family: "Yu Mincho", "YuMincho", "BIZ UDPMincho", "MS PMincho", Georgia, serif;
+  letter-spacing: 0.28em;
+}
+
+:root[data-theme] .sidebar .head-title { font-size: 0 !important; }
+:root[data-theme] .sidebar .head-title::after {
+  content: "旅路";
+  font-size: 14px;
+  font-family: "Yu Mincho", "YuMincho", "BIZ UDPMincho", "MS PMincho", Georgia, serif;
+  letter-spacing: 0.08em;
+}
+
+:root[data-theme] .sidebar .section:has(+ .section) .section-title::after { content: " · スクリプト"; letter-spacing: 0.04em; }
+:root[data-theme] .sidebar .section + .section .section-title::after { content: " · 自動実行"; letter-spacing: 0.04em; }
+:root[data-theme] .console .tabs .tab:nth-child(1)::after { content: "　出力"; letter-spacing: 0.04em; }
+:root[data-theme] .console .tabs .tab:nth-child(2)::after { content: "　問題"; letter-spacing: 0.04em; }
+
+:root[data-theme] .start .hero h1 { font-size: 0 !important; line-height: 1 !important; }
+:root[data-theme] .start .hero h1::before {
+  content: "BERSERK · ベルセルク";
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  color: var(--accent);
+}
+
+:root[data-theme] .start .hero h1::after {
+  content: "黒い剣士";
+  font-family: "Yu Mincho", "YuMincho", "BIZ UDPMincho", "MS PMincho", Georgia, serif;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+:root[data-theme] .start .links h2::after { content: "　始める"; }
+:root[data-theme] .start .recent h2::after { content: "　最近"; }
+:root[data-theme] .start .tip h2::after { content: "　今日のヒント"; }
+
+/* A vertical line of text at the foot of the explorer. */
+:root[data-theme] .sidebar { position: relative; isolation: isolate; }
+:root[data-theme] .sidebar::after {
+  content: "生贄の烙印";
+  position: absolute;
+  right: 16px;
+  bottom: 22px;
+  writing-mode: vertical-rl;
+  font-family: "Yu Mincho", "YuMincho", "BIZ UDPMincho", "MS PMincho", Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+/* Manga panel frames: thick black borders with a white inner line. */
+:root[data-theme] .sidebar { box-shadow: inset -4px 0 0 #000, inset -5px 0 0 rgba(255, 255, 255, 0.5); }
+:root[data-theme] .splitter-x { background-color: #000 !important; }
+:root[data-theme] header.titlebar { border-bottom: 4px solid #000; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+:root[data-theme] .tab-bar { border-bottom: 3px solid #000; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); }
+:root[data-theme] .console { border-top: 4px solid #000; }
+
+:root[data-theme] .tab-bar .strip .tab { background-image: none; }
+:root[data-theme] .tab-bar .strip .tab::before,
+:root[data-theme] .tab-bar .strip .tab::after { display: none; }
+:root[data-theme] .tab-bar .strip .tab.is-active { background-color: #f2f2f2; color: #0a0a0a; font-weight: 700; }
+:root[data-theme] .chip-button.is-accent { box-shadow: 3px 3px 0 #000; }
+
+/* Screentone dots on the status bar. */
+:root[data-theme] .status {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1.4px);
+  background-size: 5px 5px;
+  border-top: 3px solid #000;
+}
+
+:root[data-theme] .start .hero h1::after { color: #ffffff; text-shadow: 3px 3px 0 #000, -1px -1px 0 #000; }
+
+/* Animated wallpaper behind the whole app. */
+html, body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://raw.githubusercontent.com/Airandwater404/Potassium_Berserk_Themes/main/guts-rain/guts-rain.avif") center / cover fixed no-repeat, #0a0a0a !important;
+}
